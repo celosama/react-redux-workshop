@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-class ItemList extends Component {
+export class ItemList extends Component {
     render() {
-        const items = this.props.items;
+        const items = this.props.todo;
 
-        if (!items) {
+        if (!items || items.length < 1) {
             return <p>Use the controls above to add tasks do your todo list.</p>
         }
 
@@ -23,4 +24,10 @@ class ItemList extends Component {
     }
 }
 
-export default ItemList;
+const mapStateToProps = state => {
+    return {
+        todo: state.todo
+    }
+}
+
+export default connect(mapStateToProps)(ItemList);
