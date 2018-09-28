@@ -16,7 +16,7 @@ class ItemList extends Component {
                             return 'completed';
                     }
 
-                    return <li key={index} id={todo.id} className={completed()}>{todo.text}</li>
+                    return <li key={index} className={completed()}>{todo.text}</li>
                 })}
             </ul>
         )

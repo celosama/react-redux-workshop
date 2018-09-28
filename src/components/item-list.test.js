@@ -13,8 +13,8 @@ describe('ItemList', () => {
 
     it('displays a list of items', () => {
         const myTodos = [
-            { id: 1, completed: true, text: 'Aprender React' },
-            { id: 2, completed: false, text: 'Aprender Redux' }
+            { completed: true, text: 'Aprender React' },
+            { completed: false, text: 'Aprender Redux' }
         ];
         const component = shallow(<ItemList items={ myTodos } />);
 
