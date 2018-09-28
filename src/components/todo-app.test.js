@@ -1,10 +1,21 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import AddItemControls from './add-item-controls';
 
 import TodoApp from './todo-app';
 
-it('renders the todo app', () => {
-    const component = shallow(<TodoApp />);
+describe('TodoApp', () => {
 
-    expect(component.text()).toContain("Todo List");
+    it('renders the todo app with the title', () => {
+        const component = shallow(<TodoApp />);
+    
+        expect(component.text()).toContain("Todo List");
+    });
+    
+    it('renders the add item controls', () => {
+        const component = shallow(<TodoApp />);
+    
+        expect(component.contains(<AddItemControls />)).toEqual(true);
+    });
+
 });
