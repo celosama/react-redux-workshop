@@ -15,3 +15,16 @@ button {
     background-color: lightgreen;
     cursor: pointer;
 }
+
+ul {
+    padding: 10px;
+    margin: 20px;
+}
+
+li {
+    cursor: pointer;
+}
+
+.completed {
+    color: green;
+}
