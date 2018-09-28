@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-class AddItemControls extends Component {
+export class AddItemControls extends Component {
     render() {
         return (
             <div>
@@ -11,4 +12,4 @@ class AddItemControls extends Component {
     }
 }
 
-export default AddItemControls;
+export default connect()(AddItemControls);
